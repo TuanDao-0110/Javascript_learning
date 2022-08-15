@@ -52,5 +52,15 @@ const sayHello = (name) => {
 // capitalize method that return the name parameter to capitalize
 
 const capitalize = (name) => {
-  return skipFirstCharacter(name);
+  return getFirstCharacter(name).toUpperCase() + skipFirstCharacter(name);
+};
+
+// convertNumberToString convert number to string
+const convertNumberToString = (number) => {
+  return number.toString();
+};
+
+// complete the function getNextAge that return your next year age
+const getNextAge = (yearBorn) => {
+  return yearBorn + 1;
 };
