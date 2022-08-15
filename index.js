@@ -49,6 +49,7 @@ const sayHello = (name) => {
   return `Hello ${name}`;
 };
 //  getFullName such that it return full name of the person using interpolation
+
 // capitalize method that return the name parameter to capitalize
 
 const capitalize = (name) => {
