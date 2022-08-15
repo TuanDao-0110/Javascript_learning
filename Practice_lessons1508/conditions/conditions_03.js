@@ -3,7 +3,9 @@
 /**
  * @param {number} age
  */
-function canVote(age) {}
+function canVote(age) {
+  return age >= 18 ? true : false;
+}
 
 // Sample usage - do not modify
 console.log(canVote(25)); // true

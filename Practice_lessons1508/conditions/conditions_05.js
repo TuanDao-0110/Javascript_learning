@@ -12,6 +12,11 @@ Call that function 2 times with different number pairs, and log the output to ma
  * @param {numbers} 
  */
 
-function greaterNum(num1, num2) {}
+function greaterNum(num1, num2) {
+  return num1 - num2 > 0
+    ? `num1: ${num1} > num2 ${num2}`
+    : `num2 ${num2} >num1 ${num1}`;
+}
 
 console.log(greaterNum(5, 10));
+console.log(greaterNum(7, 3));

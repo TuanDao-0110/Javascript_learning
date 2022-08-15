@@ -9,4 +9,7 @@ Handles empty text box
 
  * @param {string} age
  */
-function getNextAge(age) {}
+function getNextAge(age) {
+  return age ? age + 1 : 0;
+}
+console.log(`result your next year age is: ${getNextAge()}`);
