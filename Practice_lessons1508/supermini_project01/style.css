@@ -272,7 +272,7 @@ a:hover {
   color: white;
 }
 .zero {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 .operation,
 .equal {
