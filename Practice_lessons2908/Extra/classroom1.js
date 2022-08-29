@@ -20,9 +20,78 @@ let people = ["Sergei", "Mariia", "Boris", "Abel"];
 /**
  */
 
- /**
-  * @param {people[]} strings
-  */
+/**
+ * @param {people[]} strings
+ */
+const showTheUser = (people) => {
 
-  const people = ["Sergei", "Mariia", "Boris", "Abel"];
-  
+    return people.forEach(item => console.log(item))
+}
+
+const removeSergei = (people) => {
+
+    let newPeople = people.filter(item => item != 'Sergei')
+    console.log(newPeople)
+
+    return newPeople
+}
+
+
+const removeAbel = (people) => {
+
+    let newPeople = people.filter(item => item != 'Abel')
+    console.log(newPeople)
+
+    return newPeople
+}
+
+const addMahalete = (people) => {
+    let newPeople = people
+    newPeople.push('Mahalete')
+    console.log(newPeople)
+    return newPeople
+}
+
+const addMyName = (people) => {
+    let newPeople = people
+    newPeople.push('Tuan')
+    console.log(newPeople)
+    return newPeople
+}
+const useSlice = (people) => {
+    return people.slice(2)
+}
+const findLocation = (people) => {
+    return people.findIndex(item => item == 'Mariia')
+}
+const findFoo = (people) => {
+    return people.findIndex(item => item == 'Foo')
+}
+const redefine = (people) => {
+
+    people.splice(2, 0, 'Rakhi')
+    people.splice(3, 0, 'Yulia')
+    return people.filter(item => item != 'Boris').filter(item => item != 'Mahalete').filter(item => item != 'Tuan')
+}
+const withBob = (people)=> { 
+    
+}
+const people = ["Sergei", "Mariia", "Boris", "Abel"];
+// 1.
+showTheUser(people)
+// 2.
+removeSergei(people)
+// 3. 
+removeAbel(people)
+// 4.
+addMahalete(people)
+// 5.
+addMyName(people)
+// 6. 
+console.log(useSlice(people))
+// 7.
+console.log(findLocation(people))
+// 8.
+console.log(findFoo(people))
+// 9.
+console.log(redefine(people))
