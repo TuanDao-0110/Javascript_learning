@@ -8,7 +8,8 @@ Complete the function getEmptyArray such that it returns an empty array.
  */
 
  function getEmptyArray() {
-
+    let arr = []
+    return arr
  }
 
  // Sample usage - do not modify

@@ -8,7 +8,7 @@ from the years parameter it receives.
  * @param {number[]} years
  */
 function getOddYears(years) {
-
+    return years.filter(item => (item % 2))
 }
 
 // Sample usage - do not modify

@@ -1,11 +1,9 @@
-let arr = [1,2,3]
-const log = ()=>{
-    arr.forEach ( (a)=>{
-
-        return console.log (a)
-    })
-
+let arr = [1, 5, 3, 1]
+const log = () => {
+return    arr.find((a) => a === 1)
 }
 
+console.log(
 
-log()
+    log()
+)

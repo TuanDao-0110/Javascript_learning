@@ -10,7 +10,7 @@ in the userIds array it receives and logs it to the console (using console.log).
  * @param {number[]} userIds
  */
 function logUserIds(userIds) {
-
+    userIds.forEach((item) => console.log(item))
 }
 
 // Sample usage - do not modify

@@ -8,7 +8,7 @@ Complete the function getPositiveTemperatures such that it returns an array cont
  * @param {number[]} temperatures
  */
 function getPositiveTemperatures(temperatures) {
-
+    return temperatures.filter(item => item > 0)
 }
 
 // Sample usage - do not modify

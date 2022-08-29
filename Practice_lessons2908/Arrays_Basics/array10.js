@@ -8,7 +8,11 @@ from the numbers parameter it receives.
  * @param {number[]} numbers
  */
 function sumPositiveNumbers(numbers) {
-
+    let total = 0;
+    numbers.forEach(item => {
+        total += item
+    })
+    return total
 }
 
 // Sample usage - do not modify

@@ -8,7 +8,8 @@ Complete the function such that the app variable is added to the apps array
  * @param {string} app
  */
 function useApp(apps, app) {
-
+    apps.push(app)
+    return apps
 
 }
 

@@ -10,7 +10,8 @@ it receives exists in the apps parameter, and false otherwise.
  * @param {string} app
  */
 function isAppUsed(apps, app) {
-
+    let result = apps.findIndex(item => item === app)
+    return result===-1 ? false : true
 }
 
 // Sample usage - do not modify

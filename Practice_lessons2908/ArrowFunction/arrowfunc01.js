@@ -10,7 +10,8 @@ Check the sample usage to see the expected result.
  * @param {number} a
  * @param {number} b
  */
-function sum() {
+function sum(a,b) {
+    console.log(a, b)
 
 }
 

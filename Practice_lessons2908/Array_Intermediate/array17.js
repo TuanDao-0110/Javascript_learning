@@ -10,7 +10,9 @@ and the second string is made up of 1 character.
  * @param {string[]} strings
  */
 function getStringSizes(strings) {
-
+    let arr = []
+    strings.forEach(item => arr.push(item.length))
+    return arr
 }
 
 

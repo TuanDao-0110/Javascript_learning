@@ -8,7 +8,7 @@ in the elements array it receives.
  * @param {array} elements
  */
 function getNumberOfElements(elements) {
-  
+  return elements.length
 }
 
 // Sample usage - do not modify

@@ -11,7 +11,13 @@ Give these properties any value you'd like, as long as it fits the expected retu
 **/
 
 function getProductDetails() {
+    let object = {
+        id: 3,
+        title: 'JS',
+        inStock: 4,
 
+    }
+    return object
 }
 
 // Sample usage - do not modify

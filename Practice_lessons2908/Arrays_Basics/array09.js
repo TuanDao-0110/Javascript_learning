@@ -8,8 +8,11 @@ it receives as a parameter.
  * @param {number[]} grades
  */
 function sumGrades(grades) {
-
-
+    let total = 0;
+    grades.forEach(item => {
+         total += item
+    })
+return total
 }
 
 // Sample usage - do not modify

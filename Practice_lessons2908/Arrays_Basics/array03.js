@@ -8,7 +8,8 @@ There is a small trick in this challenge to make sure you understand an importan
  * @param {array} apps
  */
 function useCalculator(apps) {
-
+    apps.push('Calculator')
+    return apps
 }
 
 // Sample usage - do not modify
