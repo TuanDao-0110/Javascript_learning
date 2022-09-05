@@ -6,8 +6,8 @@ The function triple receives a parameter and returns the result of multiplying i
 **/
 
 
-function sum(){
-
+const sum = (a, b) => {
+    return a + b
 }
 
 // (optional) Sample usage

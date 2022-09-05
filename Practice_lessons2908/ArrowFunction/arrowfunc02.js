@@ -8,7 +8,9 @@ Fix that without using an if condition.
 /**
  * @param {number[]} userIds
  */
-function logUserIds() {
+function logUserIds(number) {
+    // console.log(typeof(number))
+return (typeof(number) !== "undefined") ? number.forEach(e => console.log(e)) :console.log('fail')
 
 }
 
