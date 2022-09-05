@@ -2,38 +2,53 @@
  * @param {array} grades
  * @param {number} grade
  */
-function addGrade(grades, grade) {}
+function addGrade(grades, grade) {
+  return grades.push(grade)
+}
 
 /**
  * @param {array} grades
  */
-function getNumberOfGrades(grades) {}
+function getNumberOfGrades(grades) {
+  return getNumberOfGrades.length
+}
 
 /**
  * @param {array} grades
  */
-function getFirstGrade(grades) {}
+function getFirstGrade(grades) {
+  return grades[0]
+}
 
 /**
  * @param {array} grades
  */
-function getLastGrade(grades) {}
+function getLastGrade(grades) {
+  return grades[grades.length - 1]
+}
 
 /**
  * @param {array} grades
  */
-function isTestTooEasy(grades) {}
+function isTestTooEasy(grades) {
+  let result = grades.reverse()[0]
+  console.log(result)
+  return result
+
+}
 
 /**
  * @param {array} grades
  * @param {number} grade
  */
-function gradeExists(grades, grade) {}
+function gradeExists(grades, grade) { }
 
 /**
  * @param {array} grades
  */
-function exportCSV(grades) {}
+function exportCSV(grades) {
+  return grades.join(', ')
+}
 
 //
 // Sample usage do not modify below this line
@@ -67,7 +82,8 @@ gradeToCheck.addEventListener('change', () => {
 gradesForm.addEventListener('submit', (event) => {
   event.preventDefault();
   let newGrade = Number.parseInt(yourGrade.value, 10);
-  grades = addGrade(grades, newGrade);
+  // grades = addGrade(grades, newGrade);
+  addGrade(grades, newGrade)
   yourGrade.value = '';
   render(grades);
 });

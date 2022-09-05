@@ -2,12 +2,18 @@
  * @param {array} items
  * @param {string} item
  */
-function addItem() {}
+function addItem(itemValue) {
+  console.log(itemValue)
+  items.push(itemValue)
+  // return itemsArr.push(itemValue)
+}
 
 /**
  * @param {array} items
  */
-function exportLowerCasedCSV() {}
+function exportLowerCasedCSV(newItem) {
+  return newItem.join(', ')
+}
 
 // Sample usage - do not modify
 let form = document.querySelector('#shopping-list-form');
@@ -18,7 +24,9 @@ const exportedJson = document.querySelector('#exported-json');
 let items = [];
 
 function render(items) {
+  console.log(items)
   console.log('Items: ' + items.join(', '));
+
   list.innerHTML = '';
   items.forEach(function (item) {
     list.insertAdjacentHTML(
@@ -31,7 +39,7 @@ function render(items) {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  items = addItem(items, itemName.value);
+  addItem(itemName.value)
   itemName.value = '';
   render(items);
 });
