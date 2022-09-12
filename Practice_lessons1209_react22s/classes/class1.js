@@ -8,5 +8,15 @@ visualize the returned object in the console.
 
 // Sample usage - do not modify
 class User {
+
   // empty class for now
+  constructor(){
+    console.log('new contructor')
+  }
+  age () { 
+    console.log('done')
+  }
 }
+let user1= new User()
+user1.age()
+
