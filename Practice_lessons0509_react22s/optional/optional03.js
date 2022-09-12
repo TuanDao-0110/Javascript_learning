@@ -8,9 +8,8 @@ Re-write the getFirstGrade function without using if conditions.
  */
 const getFirstGrade = data => {
     if (data.results && data.results.grades) {
-        return data.results.grades[0];
+        return data?.results?.grades[0];
     }
-    return undefined;
 }
 
 // Sample usage - do not modify

@@ -4,9 +4,12 @@ You have to use array destructuring and call the variables firstName and lastNam
  * @param {string[]} user
  */
 const getFullName = (user) => {
-    return user.reduce((total, recent) => {
-        return total += (' ' + recent)
-    })
+    // return user.reduce((total, recent) => {
+
+    //     return total += (' ' + recent)
+    // })
+    let [firstName, lastName] = user
+    return `${firstName} + ${lastName} `
 };
 
 // Sample usage - do not modify

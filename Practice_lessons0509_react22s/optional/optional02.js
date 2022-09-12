@@ -9,9 +9,8 @@ Re-write the getPaymentValue function without using if conditions.
  */
 const getPaymentValue = user => {
     if (user.payment && user.payment.details && user.payment.details.value) {
-        return user.payment.details.value;
+        return user?.payment?.details?.value;
     }
-    return undefined;
 }
 
 // Sample usage - do not modify
