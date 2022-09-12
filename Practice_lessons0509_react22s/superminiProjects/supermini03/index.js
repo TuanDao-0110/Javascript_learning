@@ -8,7 +8,8 @@ and false otherwise.
  */
 
 function isPromoCodeValid(value) {
- return   (String(value).length > 5 && String(value).length <10) ? true : false
+  let checkValue = value.replace(' ', '')
+  return (String(checkValue).length > 5 && String(checkValue).length < 10) ? true : false
 }
 
 // Sample usage - do not modify

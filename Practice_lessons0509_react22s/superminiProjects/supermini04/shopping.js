@@ -24,9 +24,6 @@ const exportedJson = document.querySelector('#exported-json');
 let items = [];
 
 function render(items) {
-  console.log(items)
-  console.log('Items: ' + items.join(', '));
-
   list.innerHTML = '';
   items.forEach(function (item) {
     list.insertAdjacentHTML(
