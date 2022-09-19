@@ -15,23 +15,23 @@ class Passport {
     return this.lastName.toUpperCase()
   }
   getFullName() {
-    return this.firstName.toUpperCase() + ' '+this.lastName.toUpperCase()
+    return this.firstName.toUpperCase() + ' ' + this.lastName.toUpperCase()
   }
   getInitials() {
 
-    return this.firstName.substring(0, 1).toUpperCase() + '.'+ this.lastName.substring(0, 1).toUpperCase()
+    return this.firstName.substring(0, 1).toUpperCase() + '.' + this.lastName.substring(0, 1).toUpperCase() + '.'
 
   }
 
   getIsValidName() {
-    if (this.firstName.length <1 || this.lastName <1 || this.lastName[this.lastName.length-1] === '.') {
-        // console.log(this.lastName[length])
-        return 'Nope'
-      }else {
+    if (this.firstName.length < 1 || this.lastName < 1 || this.lastName[this.lastName.length - 1] === '.') {
+      // console.log(this.lastName[length])
+      return 'Nope'
+    } else {
 
-        return 'Yes'
-      }
-   
+      return 'Yes'
+    }
+
   }
 }
 
