@@ -29,7 +29,11 @@ Call this fakeFetch function inside the logFlightStatus function and then log th
 data that it receives once it has completed......*/
 
 const logFlightStatus = () => {
-
+fakeFetch('flight-status').then(result => { 
+console.log(result)
+}).catch(reject => { 
+    console.log(reject)
+})
 }
 
 // Sample usage (do not modify)

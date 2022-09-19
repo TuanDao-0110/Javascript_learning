@@ -2,7 +2,7 @@
 
 // Sample usage - do not modify
 const welcomeUser = (name, callback) => {
-    setTimeout(() => {
+    return setTimeout(() => {
         console.log(`Welcome ${name}`);
         if (callback) {
             callback(); // call the success callback
@@ -16,9 +16,12 @@ Note that the welcomeUser function accepts a success callback as its second para
 /**
  * @param {string} name
  */
- const sayHello = (name) => {
-         console.log("Done!");
- }
+const sayHello = (name) => {
+    welcomeUser(name, () => {
+
+        console.log("Done!");
+    })
+}
 
 // Sample usage - do not modify
 sayHello("Sam");

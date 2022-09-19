@@ -4,7 +4,7 @@
 const wait = milliseconds => {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve();
+            resolve('done');
         }, milliseconds);
     });
 }
@@ -18,9 +18,10 @@ For example, try increasing the 1000 milliseconds to 2000....*/
 /**
  * @param {number[]} grades
  */
- console.log("A");
- wait(1000).then(() => {
-     // this runs when the wait(milliseconds) function has completed successfully
-     console.log("B");
- })
- console.log("C");
+console.log("A");
+wait(1000).then((result) => {
+    console.log(result)
+    // this runs when the wait(milliseconds) function has completed successfully
+    // console.log("B");
+})
+console.log("C");

@@ -4,7 +4,7 @@
 const wait = milliseconds => {
   return new Promise(resolve => {
       setTimeout(() => {
-          resolve();
+          resolve('finished executing');
       }, milliseconds);
   });
 }
@@ -15,7 +15,7 @@ const wait = milliseconds => {
 
  const init = () => {
      console.log("Program started");
-     wait(1000);
+     wait(1000).then(result => console.log(result));
      console.log("Waited 1 second");
  }
 

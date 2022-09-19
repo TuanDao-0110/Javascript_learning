@@ -4,8 +4,8 @@
 const sumGrades = (grades, callback) => {
     // simulate expensive operation
     setTimeout(() => {
-        const sum = grades.reduce((total, current) => total + current, 0);
         if (callback) {
+            const sum = grades.reduce((total, current) => total + current, 0);
             callback(sum); // call the success callback with the sum
         }
     }, 1000);
@@ -19,8 +19,10 @@ Note that the sumGrades function accepts a success callback as its second parame
  * @param {number[]} grades
  */
 const calculateSum = (grades) => {
-    sumGrades(grades);
-    console.log("The sum is: X");
+    sumGrades(grades,(sum)=>{
+
+        console.log("The sum is: X " +sum);
+    });
 }
 
 // Sample usage - do not modify
