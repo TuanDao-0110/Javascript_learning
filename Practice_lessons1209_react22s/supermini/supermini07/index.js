@@ -4,7 +4,29 @@ class Tasks {
   }
 
   /** @param {string} csvString */
-  importCsv(csvString) {}
+  importCsv(csvString) {
+    // this.tasks.push(csvString)
+  // this.tasks=  this.tasks.concat(csvString.split(','))
+    // console.log(this.tasks)
+ this.tasks = csvString.split(',')
+  }
+  getCount() {
+    return this.tasks.length
+  }
+  getFirst() {
+    return this.tasks[0]
+  }
+  getLast() {
+    return this.tasks[this.tasks.length - 1]
+  }
+  getUnformattedTasks() {
+    let temp = ''
+    // return this.tasks.toLocaleString()
+    return this.tasks.map((e) => {
+      return e.toLowerCase()
+    })
+  }
+
 }
 
 //Sample usage do not modify (but feel free to read)
