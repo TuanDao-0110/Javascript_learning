@@ -418,12 +418,12 @@ Also, leading and trailing spaces in the search input should be ignored. */
 
 //TODO
 const renderValue = (arrValue) => {
-    let temp =''
+    let temp = ''
     arrValue?.map(e => {
         temp += `<li> ${e}</li>`;
     })
     document.querySelector("#results-list").innerHTML = temp
-console.log(temp)
+    console.log(temp)
 }
 const searchResult = (inputValueString) => {
     let resultValue = []

@@ -52,3 +52,20 @@ kalwar or yourgithubusername), and then when the user submits the form,
 the app will show the list of GitHub repositories for that user using the GitHub API. */
 
 /* Write your code here... */
+let reposForm = document.querySelector('#repos-form')
+let urlLink = ''
+let fetchWrapper = new FetchWrapper(urlLink)
+
+
+
+
+
+reposForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(e.target)
+    for (item of e.target) {
+        console.log(item.id === 'github-username' ? item.value : '')
+        console.log(item.value)
+    }
+})
+

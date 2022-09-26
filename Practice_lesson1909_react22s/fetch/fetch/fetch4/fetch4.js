@@ -19,7 +19,8 @@ and return its result. Also, visualize that the result of fetch is a Promise. Yo
 
 const getChapters = () => {
     // TODO
-
+    let fetch = new FetchWrapper('https://programmingjs-90a13-default-rtdb.europe-west1.firebasedatabase.app/notifications.json')
+    return fetch.get('').then(data => console.log(data))
 }
 
 // do NOT modify this function

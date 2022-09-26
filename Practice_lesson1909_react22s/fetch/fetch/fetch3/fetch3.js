@@ -7,6 +7,13 @@ and return its result. Also, visualize that the result of fetch is a Promise. Yo
 
 class FetchWrapper {
   //TODO
+  constructor(newUrl) {
+
+    this.url = newUrl
+  }
+  get(endPoint) {
+   return fetch(this.url + endPoint)
+  }
 }
 
 
@@ -15,9 +22,9 @@ class FetchWrapper {
  * This is only for this challenge to allow you to
  * work on the tests one by one. */
 try {
-    const API = new FetchWrapper("https://programmingjs-90a13-default-rtdb.europe-west1.firebasedatabase.app");
+  const API = new FetchWrapper("https://programmingjs-90a13-default-rtdb.europe-west1.firebasedatabase.app");
 
-    API.get("/notifications.json").then(data => {
-        console.log(data);
-    });
-} catch(error) {}
+  API.get("/notifications.json").then(data => {
+    console.log(data);
+  });
+} catch (error) { }

@@ -2,14 +2,20 @@
 <html>
   <body>
     <h1>Get hands on with JavaScript's Fetch API</h1>
-    <p>
-      Write your requests in the script and watch the console and network logs.
-    </p>
+    <p>Write your requests in the script and watch the console and network logs.</p>
 
     <script>
       // GET retrieve all to-do's
-      fetch('https://jsonplaceholder.typicode.com/todos');
+      const callTodoListApi = async () => {
+        try {
+          const result = await fetch("https://jsonplaceholder.typicode.com/todos")
+            .then((res) => res.json())
+            .then((data) => data);
+          console.log(result);
+        } catch (error) {}
+      };
 
+      callTodoListApi();
       // will return all resources
 
       // GET retrieves the to-do with specific URI (in this case id = 5)
