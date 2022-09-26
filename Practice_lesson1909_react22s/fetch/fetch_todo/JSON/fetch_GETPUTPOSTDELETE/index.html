@@ -5,17 +5,57 @@
     <p>Write your requests in the script and watch the console and network logs.</p>
 
     <script>
-      // GET retrieve all to-do's
-      const callTodoListApi = async () => {
-        try {
-          const result = await fetch("https://jsonplaceholder.typicode.com/todos")
-            .then((res) => res.json())
-            .then((data) => data);
-          console.log(result);
-        } catch (error) {}
-      };
+      let todoList;
+      let linkUrl = "https://jsonplaceholder.typicode.com/todos";
+      class TodoList {
+        constructor(linkUrl) {
+          this.linkUrl = linkUrl;
+        }
 
-      callTodoListApi();
+        getToDoListApi() {
+          return fetch(linkUrl)
+            .then((data) => data.json())
+            .then((res) => {
+              todoList = res;
+              console.log(todoList);
+            });
+        }
+
+        postToDoListApi(endPoint, body) {
+          return this._send("post", endPoint, body).then((res) => {
+            console.log(res);
+          });
+        }
+        deleteToDoListApi(endpoint, body) {
+          return this._send("delete", endpoint, body);
+        }
+        putToDoListApi(endPoint, body) {
+          return this._send("put", endPoint, body);
+        }
+        _send(method, endpoint, body) {
+          return fetch(this.linkUrl + endpoint, {
+            method,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+          }).then((res) => {
+            // console.log(res.json());
+            return res.json();
+          });
+        }
+      }
+      // GET retrieve all to-do's
+      const toDoList = new TodoList(linkUrl);
+      toDoList.getToDoListApi();
+      // toDoList.putToDoListApi("/99", {
+      //   userId: 201,
+      //   title: "clean room",
+      //   completed: false,
+      //   id: 201,
+      // });
+      // toDoList.postToDoListApi("", { userId: 201, title: "clean room", completed: false, id: 201 });
+      toDoList.deleteToDoListApi("/99");
       // will return all resources
 
       // GET retrieves the to-do with specific URI (in this case id = 5)
