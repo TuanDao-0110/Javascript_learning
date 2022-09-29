@@ -11,7 +11,6 @@ const getRandomNumber = async () => {
     const randomNumber = Math.floor(Math.random() * 10);
     return randomNumber;
 }
-
 // Sample usage - do not modify
 getRandomNumber().then(value => {
     console.log(value);
