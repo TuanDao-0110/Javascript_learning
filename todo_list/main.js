@@ -14,13 +14,16 @@ form.addEventListener('submit', (e) => {
     for (i of e.target) {
         // console.log(i.value)
         if (i.value) {
+
             let temp = {
                 name: i.value,
                 done: false
             }
             toDoArr.push(temp)
+            i.value = ''
         }
     }
+
     renderToDoArr(toDoArr)
 })
 
@@ -46,6 +49,7 @@ let checkDelete = (cardId, deleteId, index) => {
     if (document.querySelector(`#${deleteId}`).checked) {
         document.querySelector(`#${cardId}`).classList.add('hidden')
         toDoArr.splice(index, 1)
+        renderToDoArr()
     }
 }
 
@@ -53,9 +57,12 @@ let checkItDone = (cardId, doneId, index) => {
     if (document.querySelector(`#${doneId}`).checked) {
         document.querySelector(`#${cardId}`).classList.add('done__card')
         toDoArr[index].done = true
-    }else { 
+    } else {
         document.querySelector(`#${cardId}`).classList.remove('done__card')
         toDoArr[index].done = false
 
     }
+
+    renderToDoArr()
+
 }
