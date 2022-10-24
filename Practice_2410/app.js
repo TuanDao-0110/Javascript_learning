@@ -1,20 +1,38 @@
-function takeShower() {
-    return "Showering!"
+// check validAnagram 
+
+const arr1 = ['c', 'b', 'a', 'a'];
+const arr2 = ['a', 'b', 'c', 'a'];
+
+
+// 1. create compare 2 arr function  
+function areEqual(array1, array2) {
+    if (array1.length === array2.length) {
+        return array1.every(element => {
+            if (array2.includes(element)) {
+                return true;
+            }
+
+            return false;
+        });
+    }
+
+    return false;
 }
 
-function eatBreakfast() {
-    let meal = cookFood()
-    return `Eating ${meal}`
+console.log(areEqual(arr1, arr2))
+
+
+function createArr(str) {
+    return str.toLowerCase().split('')
 }
 
-function cookFood() {
-    let items = ["Oatmeal", "Eggs", "Protein Shake"]
-    return items[Math.floor(Math.random() * items.length)];
-}
-function wakeUp() {
-    takeShower()
-    eatBreakfast()
-    console.log("Ok ready to go to work!")
+
+
+function check(str1, str2) {
+    let arr1 = createArr(str1)
+    let arr2 = createArr(str2)
+    return areEqual(arr1, arr2)
 }
 
-wakeUp()
+
+console.log(check('Get', 'Teg')); // 👉️ true
