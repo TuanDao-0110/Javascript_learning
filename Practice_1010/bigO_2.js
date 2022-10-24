@@ -4,5 +4,5 @@ function logAtLeast5(n)
   {    console.log(i);
   }
 }
-
+// O()
 console.log(logAtLeast5(10))

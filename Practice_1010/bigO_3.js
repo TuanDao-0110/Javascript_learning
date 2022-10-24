@@ -4,5 +4,5 @@ function logAtMost5(n)
   {    console.log(i);
   }
 }
-
+// O (1)
 console.log(logAtMost5(10))

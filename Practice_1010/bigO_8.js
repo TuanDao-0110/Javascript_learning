@@ -10,3 +10,4 @@ function subtotals(array) {
   }
   return subtotalArray;
 }
+// O(1 + n (n+1)) ==> O(1 + n^2 + n) ==> O(n^2)

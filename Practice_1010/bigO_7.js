@@ -9,3 +9,4 @@ function onlyElementsAtEvenIndex(array) {
   }
   return newArray;
 }
+// O(1+ n(1 +1)) ===> O(n)

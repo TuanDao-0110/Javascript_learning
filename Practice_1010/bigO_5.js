@@ -5,5 +5,5 @@ function logAtMost10(n)
     console.log(i);
   }
 }
-
+// O(10) ==> O(1)
 console.log(logAtMost10(11))

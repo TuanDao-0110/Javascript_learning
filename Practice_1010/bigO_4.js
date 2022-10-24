@@ -5,5 +5,5 @@ function logUpTo(n)
   console.log(i);
   }
 }
-
+// O(n)
 console.log(logUpTo(11))
