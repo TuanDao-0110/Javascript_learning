@@ -76,8 +76,6 @@ form.addEventListener('submit', function (e) {
     const endpoint = userName + "/repos/";
 
     newWrapper.get(endpoint).then(data => console.log(data));
-
-
 });
 
 
