@@ -19,20 +19,21 @@ function areEqual(array1, array2) {
     return false;
 }
 
-console.log(areEqual(arr1, arr2))
-
-
 function createArr(str) {
     return str.toLowerCase().split('')
 }
 
-
+function createSortString(str) {
+    return str.toLowerCase().split('').sort().join('')
+}
 
 function check(str1, str2) {
     let arr1 = createArr(str1)
     let arr2 = createArr(str2)
-    return areEqual(arr1, arr2)
+    // we can do with 2 type of job
+    return createSortString(str1) === createSortString(str2)
+    // or we do with arr
+    // return areEqual(arr1, arr2)
 }
-
 
 console.log(check('Get', 'Teg')); // 👉️ true
