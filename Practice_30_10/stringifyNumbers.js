@@ -3,12 +3,20 @@
 //Recursion would be a great way to solve this task.
 
 function stringifyNumbers(obj) {
-
-  
+  for (const i in obj) {
+    console.log(typeof obj[i])
+    if (typeof obj[i] !== 'object' && typeof obj[i] === 'number') {
+      obj[i] = obj[i].toString()
+    }
+    if (typeof obj[i] === 'object') {
+      stringifyNumbers(obj[i])
+    }
+  }
+  return obj
 }
 
-/*
-let obj = {
+
+let test = {
   num: 1,
   test: [],
   data: {
@@ -18,4 +26,7 @@ let obj = {
       random: 66
     }
   }
-}*/
+}
+
+
+stringifyNumbers(test)
