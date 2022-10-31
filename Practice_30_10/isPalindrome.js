@@ -8,7 +8,7 @@ function isPalindrome(str) {
     for (n = 0; n < arr.length; n++) {
         arr[n] = str.split('')[arr.length - 1 - n]
     }
-    return arr.join('') === str
+    return arr.join('') === str 
 }
 
 
