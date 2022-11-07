@@ -4,7 +4,6 @@
 
 function stringifyNumbers(obj) {
   for (const i in obj) {
-    console.log(typeof obj[i])
     if (typeof obj[i] !== 'object' && typeof obj[i] === 'number') {
       obj[i] = obj[i].toString()
     }
