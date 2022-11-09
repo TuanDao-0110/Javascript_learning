@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Get hands on with JavaScript's Fetch API</h1>
+    <p>Write your requests in the script and watch the console and network logs.</p>
+
+    <script>
+      let todoList;
+      let linkUrl = "https://jsonplaceholder.typicode.com/todos";
+      class TodoList {
+        constructor(linkUrl) {
+          this.linkUrl = linkUrl;
+        }
+
+        getToDoListApi() {
+          return fetch(linkUrl)
+            .then((data) => data.json())
+            .then((res) => {
+              todoList = res;
+              console.log(todoList);
+            });
+        }
+
+        postToDoListApi(endPoint, body) {
+          return this._send("post", endPoint, body).then((res) => {
+            console.log(res);
+          });
+        }
+        deleteToDoListApi(endpoint, body) {
+          return this._send("delete", endpoint, body);
+        }
+        putToDoListApi(endPoint, body) {
+          return this._send("put", endPoint, body);
+        }
+        _send(method, endpoint, body) {
+          return fetch(this.linkUrl + endpoint, {
+            method,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+          }).then((res) => {
+            // console.log(res.json());
+            return res.json();
+          });
+        }
+      }
+      // GET retrieve all to-do's
+      const toDoList = new TodoList(linkUrl);
+      toDoList.getToDoListApi();
+      // toDoList.putToDoListApi("/99", {
+      //   userId: 201,
+      //   title: "clean room",
+      //   completed: false,
+      //   id: 201,
+      // });
+      // toDoList.postToDoListApi("", { userId: 201, title: "clean room", completed: false, id: 201 });
+      toDoList.deleteToDoListApi("/99");
+      // will return all resources
+
+      // GET retrieves the to-do with specific URI (in this case id = 5)
+
+      /* will return this specific resource:
+        {
+            "userId": 1,
+            "id": 5,
+            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+            "completed": false
+        }
+        */
+
+      // POST adds a random id to the object sent
+
+      /* will return
+        {
+            "userId": 1,
+            "title": "clean room",
+            "completed": false,
+            "id": 201
+        }
+        */
+
+      // PUT to the resource with id = 5 to change the name of task
+
+      /* will return
+        {
+            "userId": 1,
+            "id": 5,
+            "title": "hello task",
+            "completed": false
+        }
+        */
+
+      // PATCH to the resource id = 1
+      // update that task is completed
+
+      /* will return
+        {
+            "userId": 1,
+            "id": 1,
+            "title": "delectus aut autem",
+            "completed": true
+        }
+        */
+
+      // DELETE task with id = 1
+
+      // empty response: {}
+    </script>
+  </body>
+</html>

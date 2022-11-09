@@ -1,0 +1,1 @@
+console.log(Math.min(19,12))
