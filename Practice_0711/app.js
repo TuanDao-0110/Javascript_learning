@@ -1,18 +1,36 @@
-//Write a recursive func,on called isPalindrome which returns true if the string passed
-//to it is a palindrome (reads the same forward and backward).
-//Otherwise it returns false.
+//Write a func,on called stringifyNumbers which takes in an object and finds all of the values
+//which are numbers and converts them to strings.
+//Recursion would be a great way to solve this task.
 
-// function isPalindrome(str) {
-//     let arr = str.split('')
-
-//     for (n = 0; n < arr.length; n++) {
-//         arr[n] = str.split('')[arr.length - 1 - n]
-//     }
-//     return arr.join('') === str
-// }
-
-function isPalindrome(str) {
-   
+function stringifyNumbers(obj) {
+    for (const i in obj) {
+        if (typeof obj[i] !== 'object' && typeof obj[i] === 'number') {
+            obj[i] = obj[i].toString()
+        }
+        if (typeof obj[i] === 'object') {
+            stringifyNumbers(obj[i])
+        }
+    }
 }
 
-console.log(isPalindrome('this'))
+
+let test = {
+    num: 1,
+    test: [],
+    data: {
+        val: 4,
+        info: {
+            isRight: true,
+            random: 66,
+             Newnot: {
+                isRight: true,
+                random: 66
+            }
+        }
+    }
+}
+
+console.log(
+
+    stringifyNumbers(test)
+)
