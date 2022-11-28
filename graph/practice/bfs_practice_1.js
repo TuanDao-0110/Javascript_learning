@@ -9,5 +9,5 @@
 //   b   c
 // d   e   f
 
-bfs(a, "e") // true
-bfs(a, "z") // false
+// bfs(a, "e") // true
+// bfs(a, "z") // false
